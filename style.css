@@ -1,101 +1,600 @@
+/* =======================================================
+   RESET
+======================================================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#fff5ee;
-display:flex;
-justify-content:center;
-padding:24px 16px 40px;
+    background:#fff5ee;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 20px;
+    overflow-x:hidden;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.container{
-width:100%;
-max-width:420px;
-display:flex;
-flex-direction:column;
-align-items:center;
+
+/* =======================================================
+   WRAPPER
+======================================================= */
+
+.wrapper{
+    position:relative;
+    width:100%;
+    max-width:720px;
 }
+
+
+/* =======================================================
+   FRAME
+======================================================= */
+
+.frame{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:594px;
+    height:auto;
+    z-index:1;
+    pointer-events:none;
+}
+
+
+/* =======================================================
+   DECOR
+======================================================= */
+
+.decor{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:535px;
+    height:auto;
+    z-index:2;
+    pointer-events:none;
+}
+
+
+/* =======================================================
+   CARD
+======================================================= */
+
+.card{
+
+    position:relative;
+
+    z-index:3;
+
+    width:100%;
+
+    max-width:594px;
+
+    margin:0 auto;
+
+    padding:
+
+        46px
+        36px
+        42px
+        36px;
+
+}
+
+
+/* =======================================================
+   HERO
+======================================================= */
+
+.hero{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    gap:28px;
+
+    margin-bottom:34px;
+
+}
+
+
+/* =======================================================
+   LEFT
+======================================================= */
+
+.hero-left{
+
+    flex-shrink:0;
+
+}
+
+
+/* =======================================================
+   AVATAR
+======================================================= */
 
 .avatar{
-width:256px;
-height:256px;
-image-rendering:pixelated;
-margin-bottom:8px;
+
+    width:248px;
+
+    display:block;
+
+    image-rendering:pixelated;
+
 }
+
+
+/* =======================================================
+   RIGHT
+======================================================= */
+
+.hero-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding-top:12px;
+
+}
+
+
+/* =======================================================
+   NICKNAME
+======================================================= */
 
 .nickname{
-width:350px;
-max-width:92%;
-height:auto;
-image-rendering:pixelated;
-margin-bottom:24px;
+
+    width:282px;
+
+    display:block;
+
+    margin-bottom:18px;
+
+    image-rendering:pixelated;
+
 }
 
-.links{
-width:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
+
+/* =======================================================
+   STATUS
+======================================================= */
+
+.status{
+
+    width:244px;
+
+    display:block;
+
+    margin-bottom:18px;
+
+    image-rendering:pixelated;
+
 }
+
+
+/* =======================================================
+   THX
+======================================================= */
+
+.thx{
+
+    width:244px;
+
+    display:block;
+
+    image-rendering:pixelated;
+
+}
+
+
+/* =======================================================
+   MOBILE INFO
+======================================================= */
+
+.mobile-info{
+
+    display:none;
+
+}
+
+/* =======================================================
+   SOCIAL
+======================================================= */
+
+.social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-bottom:34px;
+
+}
+
+.social a{
+
+    display:block;
+
+    margin-bottom:16px;
+
+    text-decoration:none;
+
+}
+
+
+/* =======================================================
+   BIG BUTTONS
+======================================================= */
+
+.btn{
+
+    width:522px;
+
+    height:auto;
+
+    display:block;
+
+    image-rendering:pixelated;
+
+    transition:
+        transform .15s ease,
+        filter .15s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(1px) scale(1.02);
+
+    filter:brightness(1.05);
+
+}
+
+
+/* =======================================================
+   NSFW
+======================================================= */
+
+.nsfw{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+/* =======================================================
+   DIVIDER
+======================================================= */
+
+.divider{
+
+    width:515px;
+
+    display:block;
+
+    margin-bottom:22px;
+
+    image-rendering:pixelated;
+
+}
+
+
+/* =======================================================
+   SMALL BUTTONS
+======================================================= */
+
+.btn-small{
+
+    width:522px;
+
+    height:auto;
+
+    display:block;
+
+    image-rendering:pixelated;
+
+    transition:
+        transform .15s ease,
+        filter .15s ease;
+
+}
+
+.nsfw a{
+
+    display:block;
+
+    margin-bottom:16px;
+
+    text-decoration:none;
+
+}
+
+.btn-small:hover{
+
+    transform:translateY(1px) scale(1.02);
+
+    filter:brightness(1.05);
+
+}
+
+
+/* =======================================================
+   FOOTER
+======================================================= */
+
+.footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:26px;
+
+}
+
+.stay{
+
+    width:304px;
+
+    height:auto;
+
+    display:block;
+
+    image-rendering:pixelated;
+
+}
+
+
+/* =======================================================
+   LINKS
+======================================================= */
 
 a{
-display:block;
-margin-bottom:12px;
+
+    -webkit-tap-highlight-color:transparent;
+
 }
 
-.btn{
-width:384px;
-max-width:100%;
-height:auto;
-display:block;
-image-rendering:pixelated;
+a img{
+
+    cursor:pointer;
+
 }
 
-.divider{
-width:384px;
-max-width:100%;
-height:auto;
-display:block;
-margin-top:34px;
-margin-bottom:30px;
-image-rendering:pixelated;
+
+/* =======================================================
+   DESKTOP ONLY
+======================================================= */
+
+.desktop-only{
+
+    display:block;
+
 }
 
-@media (max-width:430px){
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:700px){
+
+body{
+
+    padding:20px 12px;
+
+}
+
+
+/* ---------------- FRAME ---------------- */
+
+.frame{
+
+    width:100%;
+
+    max-width:594px;
+
+}
+
+
+/* ---------------- DECOR ---------------- */
+
+.decor{
+
+    width:92%;
+
+    max-width:535px;
+
+}
+
+
+/* ---------------- CARD ---------------- */
+
+.card{
+
+    padding:
+        28px
+        18px
+        30px
+        18px;
+
+}
+
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:24px;
+
+}
+
+
+.hero-right{
+
+    align-items:center;
+
+    padding-top:0;
+
+}
+
+
+/* ---------------- AVATAR ---------------- */
 
 .avatar{
-width:256px;
-height:256px;
+
+    width:248px;
+
 }
+
+
+/* ---------------- NICKNAME ---------------- */
 
 .nickname{
-width:350px;
-max-width:92%;
+
+    width:282px;
+
+    margin-bottom:0;
+
 }
+
+
+/* ---------------- STATUS ---------------- */
+
+.desktop-only{
+
+    display:none;
+
+}
+
+
+.mobile-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-top:26px;
+
+}
+
+
+.mobile-info .status{
+
+    margin-bottom:16px;
+
+}
+
+
+.mobile-info .thx{
+
+    margin-bottom:0;
+
+}
+
+
+/* ---------------- BUTTONS ---------------- */
 
 .btn{
-width:100%;
+
+    width:100%;
+
+    max-width:522px;
+
 }
+
+
+.btn-small{
+
+    width:100%;
+
+    max-width:522px;
+
+}
+
 
 .divider{
-width:100%;
-}
 
-.links a:nth-child(2){
-margin-bottom:0;
-}
-@media (min-width: 768px){
+    width:100%;
 
-    .avatar{
-        margin-bottom:20px;
-    }
-
-    .nickname{
-        margin-bottom:32px;
-    }
+    max-width:515px;
 
 }
+
+
+/* ---------------- FOOTER ---------------- */
+
+.footer{
+
+    margin-top:30px;
+
+}
+
+
+.stay{
+
+    width:304px;
+
+}
+
+}
+
+
+/* =======================================================
+   LARGE DESKTOP
+======================================================= */
+
+@media (min-width:1200px){
+
+.card{
+
+    transform:scale(1.03);
+
+    transform-origin:top center;
+
+}
+
+}
+
+
+/* =======================================================
+   IMAGE QUALITY
+======================================================= */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
 }
